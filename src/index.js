@@ -91,7 +91,7 @@ var TouchableBounce = React.createClass({
    * defined on your component.
    */
   touchableHandleActivePressIn: function(e: Event) {
-    this.bounceTo(0.93, 0.1, 0);
+    this.bounceTo(0.90, 0.1, 0);
     this.props.onPressIn && this.props.onPressIn(e);
   },
 
@@ -105,12 +105,12 @@ var TouchableBounce = React.createClass({
     if (onPressWithCompletion) {
       onPressWithCompletion(() => {
         this.state.scale.setValue(0.93);
-        this.bounceTo(1, 10, 10, this.props.onPressAnimationComplete);
+        this.bounceTo(1, 2, 10, this.props.onPressAnimationComplete);
       });
       return;
     }
 
-    this.bounceTo(1, 10, 10, this.props.onPressAnimationComplete);
+    this.bounceTo(1, 2, 10, this.props.onPressAnimationComplete);
     this.props.onPress && this.props.onPress(e);
   },
 

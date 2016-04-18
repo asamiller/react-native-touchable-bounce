@@ -2,7 +2,7 @@
 
 var React = require('react-native');
 var { AppRegistry, StyleSheet, Text, View } = React;
-var TouchableBounce = require('react-native-touchable-bounce');
+var TouchableBounce = require('../src/');
 
 var Example = React.createClass({
   getInitialState() {
