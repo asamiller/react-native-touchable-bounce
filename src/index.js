@@ -64,6 +64,8 @@ var TouchableBounce = React.createClass({
      * views.
      */
     hitSlop: EdgeInsetsPropType,
+
+    disabled: React.PropTypes.bool,
   },
 
   getInitialState: function(): State {
@@ -91,16 +93,22 @@ var TouchableBounce = React.createClass({
    * defined on your component.
    */
   touchableHandleActivePressIn: function(e: Event) {
+    if (this.props.disabled) return;
+
     this.bounceTo(0.90, 0.1, 0);
     this.props.onPressIn && this.props.onPressIn(e);
   },
 
   touchableHandleActivePressOut: function(e: Event) {
+    if (this.props.disabled) return;
+
     this.bounceTo(1, 0.4, 0);
     this.props.onPressOut && this.props.onPressOut(e);
   },
 
   touchableHandlePress: function(e: Event) {
+    if (this.props.disabled) return;
+    
     var onPressWithCompletion = this.props.onPressWithCompletion;
     if (onPressWithCompletion) {
       onPressWithCompletion(() => {
