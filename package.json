@@ -20,7 +20,9 @@
   "devDependencies": {
     "babel-eslint": "^5.0.0",
     "eslint": "^2.2.0",
-    "eslint-plugin-react": "^4.1.0",
-    "react-native": "^0.21"
+    "eslint-plugin-react": "^4.1.0"
+  },
+  "dependencies": {
+    "prop-types": "15.6.0"
   }
 }
